@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shavi - Registrering</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+
+    <nav class="navbar">
+        <a href="index.html" class="logo">Shavi</a>
+        <ul class="nav">
+            <li><a href="index.html">Hjem</a></li>
+            <li><a href="forde.html">Førde</a></li>
+            <li><a href="bergen.html">Bergen</a></li>
+            <li><a href="oslo.html">Oslo</a></li>
+            <li><a href="bil.html">Bil</a></li>
+            <li><a href="baat.html">Båt</a></li>
+            <li><a href="medlemskap.html">Medlemskap</a></li>
+            <li><a href="#">Registrering</a></li>
+        </ul>
+    </nav>
+
+    <section class="registrering-kontainer">
+        <div class="reg-form">
+            <h1>Registrering</h1>
+            <p>Velg medlemskap</p>
+            <div class="reg-bts">
+                <button onClick="bildeling()" class="reg-btn" id="bildeling">Bildeling</button>
+                <button onClick="baatdeling()" class="reg-btn" id="baatdeling">Båtdeling</button>
+                <button onclick="total()" class="reg-btn" id="total">Total</button>
+                <p id="reg-pris">Pris: </p>
+            </div>
+
+            <label for="fornavn">Fornavn</label>
+            <input type="text" placeholder="Skriv ditt fornavn" id="fornavn" required>
+            
+            <label for="etternavn">Etternavn</label>
+            <input type="text" placeholder="Skriv ditt etternavn" id="etternavn" required>
+            
+            <label for="email">E-post</label>
+            <input type="email" placeholder="Skriv din e-post" id="email" required>
+            
+            <label for="telefonnummer">Telefonnummer</label>
+            <input type="tel" placeholder="Skriv ditt telefonnummer" id="telefonnummer" required>
+            
+            <label for="passord">Passord</label>
+            <input type="password" placeholder="Skriv ditt passord" id="passord" required>
+            
+            <label for="gjenta-passord">Gjenta passord</label>
+            <input type="password" placeholder="Gjenta ditt passord" id="gjenta-passord" required>
+            <button onClick="alert('Takk, du er nå registrert.')" type="submit" class="reg-button">Registrer</button>
+        </div>
+    </section>
+
+    <script>
+        function bildeling() {
+            document.getElementById("reg-pris").innerHTML = "Pris: 15000,- Pr. år"
+            document.getElementById("bildeling").style.background = "#DDD"
+            document.getElementById("baatdeling").style.background = "#EFEFEF"
+            document.getElementById("total").style.background = "#EFEFEF"
+        }
+        function baatdeling() {
+            document.getElementById("reg-pris").innerHTML = "Pris: 25000,- Pr. år"
+            document.getElementById("baatdeling").style.background = "#DDD"
+            document.getElementById("bildeling").style.background = "#EFEFEF"
+            document.getElementById("total").style.background = "#EFEFEF"
+        }
+        function total() {
+            document.getElementById("reg-pris").innerHTML = "Pris: 30000,- Pr. år"
+            document.getElementById("total").style.background = "#DDD"
+            document.getElementById("baatdeling").style.background = "#EFEFEF"
+            document.getElementById("bildeling").style.background = "#EFEFEF"
+        }
+    </script>
+
+</body>
+
+</html>

@@ -9,14 +9,19 @@ body {
 }
 
 h1 {
-    font-size: 50px;
+    font-size: 42px;
     width: 100%;
     text-align: center;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 32px;
     width: 100%;
+    text-align: center;
+}
+
+h3 {
+    font-size: 32px;
     text-align: center;
 }
 
@@ -24,6 +29,16 @@ p {
     font-size: 24px;
     line-height: 50px;
     text-align: center;
+    word-wrap: break-word;
+    line-height: initial;
+}
+
+span {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 40px;
+    display: table;
+    margin: 0 auto;
 }
 
 hr {
@@ -36,16 +51,26 @@ img {
     height: 100%;
 }
 
+a {
+    margin: 15px;
+    color: #000;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: rgb(90, 90, 90);
+}
+
 button {
-    font-size: 30px;
-    padding: 18px 100px;
-    border-radius: 8px;
+    font-size: 25px;
+    padding: 18px 80px;
+    border-radius: 18px;
     transition: 0.2s;
 }
 
 button:hover {
-    background-color: rgb(127, 127, 127);
-    color: white;
+    background-color: #ddd;
     cursor: pointer;
 }
 
@@ -61,14 +86,16 @@ button:hover {
     background-color: rgba(255, 255, 255, 0.95);
     width: 100%;
     height: 70px;
-    z-index: 1;
+    z-index: 10;
+    top: 0;
+    border-bottom: 1px solid rgb(131, 131, 131);
 }
 
 .nav {
     display: flex;
     justify-content: right;
     list-style: none;
-    margin-right: 15%;
+    margin-right: 3%;
 }
 
 .logo {
@@ -80,16 +107,6 @@ button:hover {
     font-size: 35px;
 }
 
-a {
-    margin: 15px;
-    color: #000;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-
-a:hover {
-    color: rgb(90, 90, 90);
-}
 
 /***** FORSIDE  *****/
 
@@ -111,10 +128,10 @@ a:hover {
 
 .hero h1 {
     font-weight: bold;
-    font-size: 75px;
+    font-size: 60px;
     color: white;
     position: absolute;
-    bottom: 5%;
+    bottom: 9%;
     -webkit-text-stroke: 1.5px black; 
     text-transform: uppercase;
 }
@@ -151,39 +168,37 @@ a:hover {
     margin-top: 3%;
 }
 
-/* Kjøretøy */
+/* Gjenbruks kontainer */
 
-.kjoretoy {
+.kontainer {
     position: relative;
     width: 100%;
     overflow: hidden;
     margin: 30px 0px 70px 0px;
 }
 
-.kjoretoy .bil {
+.kontainer .venstre {
     width: 45%;
     height: 50vh;
-    background-color: blanchedalmond;
     overflow: hidden;
     float: left;
     margin: 10px 0px 20px 50px;
 }
 
-.kjoretoy .baat {
+.kontainer .høgre {
     width: 45%;
     height: 50vh;
-    background-color: rgb(229, 219, 205);
     overflow: hidden;
     float: right;
     margin: 10px 50px 20px 0px;
 }
 
-.kjoretoy img {
+.kontainer .img {
     transition: 1s ease;
     opacity: 0.8;
 }
 
-.kjoretoy img:hover {
+.kontainer .img:hover {
     opacity: 1;
     transform: scale(1.05);
     transition: 1s ease;
@@ -192,11 +207,194 @@ a:hover {
 
 /* Medlemskap */
 
-.medlemskap {
+.medlemskap-home {
     margin: 80px 0px;
 }
 
-.medlemskap button {
+.medlemskap-home button {
     display: grid;
-    margin: 2% auto;
+    margin: 0 auto;
 }
+
+
+/* Byer */
+
+#førde-hero .hero-bilde {
+    filter: grayscale(0%);
+}
+
+.venstre iFrame {
+    text-align: center;
+    float: none;
+}
+
+.kontainer h2 {
+    margin-bottom: 50px;
+}
+
+.maps {
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+}
+
+.høgre p {
+    line-height: 50px;
+}
+
+.senter a {
+    text-transform: capitalize;
+}
+
+
+/* Medlemskap */
+
+.medlemskap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 5% 3% 0 3%;
+}
+
+.medlemskap h1 {
+    margin-bottom: 70px;
+}
+
+.medlemskap-div {
+    padding: 20px 50px;
+    width: 30%;
+    height: 60vh;
+    line-height: 100px;
+    border: 2px solid rgb(108, 107, 107);
+    background-color: rgba(239, 239, 239, 0.272);
+    box-shadow: 
+    0px 3px 1px -2px rgb(0 0 0 / 20%), 
+    0px 2px 2px 0px rgb(0 0 0 / 14%),
+    0px 1px 5px 0px rgb(130 130 130 / 62%);
+}
+
+.medlemskap-div h3 {
+    font-size: 24px;
+    font-weight: normal;
+    line-height: initial;
+}
+
+.medlemskap button a {
+    margin: 0px;
+}
+
+.medlemskap button {
+    font-size: 20px;
+    padding: 18px 60px;
+    border-radius: 20px;
+    transition: 0.2s;
+    margin: 40px 0 0 48px;
+}
+
+/* Registrering */
+
+.registrering-kontainer {
+    margin: 110px 150px 0 150px;
+    padding: 0 350px 0 350px;
+}
+
+input[type=text], input[type=password], input[type=email], input[type=tel] {
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0 16px 0;
+    display: inline-block;
+    border: none;
+    background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus, [type=email]:focus, input[type=tel]:focus {
+    background-color: #ddd;
+    outline: none;
+}
+
+.registrering-kontainer h1, .registrering-kontainer p {
+    line-height: 8px;
+}
+
+.registrering-kontainer p {
+    font-size: 20px;
+}
+
+.registrering-kontainer button {
+    font-size: 20px;
+    padding: 10px 120px;
+    border-radius: 10px;
+    width: 100%;
+}
+
+.reg-btn {
+    margin-left: 5px;
+}
+
+.reg-bts {
+    width: 100%;
+}
+.reg-bts button {
+    width: 32%;
+    padding: 0;
+}
+
+
+/* Kjøretøy */
+
+.kontainer-kjoretoy {
+    height:unset;
+    margin: 0;
+    padding-top: 70px;
+    height: 100vh;
+}
+
+.kontainer-kjoretoy .kjoretoy-spek {
+    margin: 0;
+    width: 50%;
+    height: 100%;
+    border-right: double;
+    margin: auto;
+}
+
+.venstre-box {
+    margin: 0 auto;
+    text-align: left;
+    line-height: 20px;
+    padding-top: 30px;
+}
+
+.overskrift th {
+    padding: 0px 0 20px 0;
+    text-align: center;
+}
+
+.kontainer-kjoretoy .overskrift {
+    text-decoration: none;
+    font-size: 32px;
+}
+
+.kontainer table img {
+    height: 300px;
+    width: 520px;
+    margin-bottom: 20px;
+}
+
+.kontainer-kjoretoy .høgre {
+    margin: 0;
+    width: 50%;
+    height: 100%;
+}
+
+.produkt-info {
+    padding: 42px 80px 0 80px;
+    overflow: scroll;
+}
+
+.produkt-info p {
+    font-size: 16px;
+    line-height: 32px;
+    text-align: left;
+}
+
